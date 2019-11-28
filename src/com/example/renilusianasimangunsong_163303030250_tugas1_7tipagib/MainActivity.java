@@ -54,17 +54,11 @@ public class MainActivity extends Activity {
 				//Toast.makeText(MainActivity.this, "Tested!", Toast.LENGTH_SHORT).show();
 				HashMap<String, String> hm = contactList.get(arg2);
 				
-				Intent intent = new Intent(MainActivity.this, ContactDetails.class);
+				Intent intent = new Intent(MainActivity.this, Messages.class);
 				
 				intent.putExtra("id", hm.get("id"));
 				intent.putExtra("name", hm.get("name"));
-				intent.putExtra("address", hm.get("address"));
-				intent.putExtra("email", hm.get("email"));
-				intent.putExtra("phone", hm.get("phone"));
-				intent.putExtra("dob", hm.get("dob"));
-				intent.putExtra("created_at", hm.get("created_at"));
-				intent.putExtra("updated_at", hm.get("updated_at"));
-				
+								
 				startActivity(intent);
 				
 				//Toast.makeText(MainActivity.this, hm.get("email"), Toast.LENGTH_SHORT).show();
